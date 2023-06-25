@@ -47,6 +47,10 @@
 
 
         }
+        hr{
+            background-color: rgb(141, 251, 201);
+            height: 1px;
+        }
 
         .wrap1 {
             margin-left: 1%;
@@ -63,7 +67,7 @@
             width: 210px;
             height: 150px;;
         }
-        hr{
+        wrap1 > hr{
             border: 1px dotted #000;
             width: 220px;
         }
@@ -126,19 +130,59 @@
             border-radius: 15px;
             float: right;
         }
+        #wrap2{
+
+            overflow-y: scroll;
+            height: 550px;
+            margin-right: 7px;
+            margin-top: 3px;
+            }
 
         h2 {
-            margin-left: 41%;
+            margin-left: 25%;
+        }
+        .qna{
+            margin-left: 33px;
+            width: 535px;
+            height: 1800px;
+        }
+        #qna-main{
+            margin-top: 5px;
+            margin-left: 2px;
+            width: 530px;
+            height: 400px;
+            border-radius: 10px;
+        }
+        #qna-list{
+            margin-top: 5px;
+            margin-left: 2px;
+            width: 530px;
+            height: 400px;
+            border-radius: 10px;
+        }
+        #qna-detail{
+            margin-top: 5px;
+            margin-left: 2px;
+            width: 530px;
+            height: 400px;
+            border-radius: 10px;
+        }
+        #qna-edit{
+            margin-top: 5px;
+            margin-left: 2px;
+            width: 530px;
+            height: 400px;
+            border-radius: 10px;
         }
 
         #category {
-            margin-left: 530px;
-            margin-top: -67.5px;
+     
+            margin-left: 802px;
+            margin-top: -567px;
             width: 20px;
         }
 
         button {
-            z-index: 2; /* 버튼을 점선 위로 위치시킴 */
             margin-top: 5px;
             margin-bottom: 1px;
             margin-left: 70px;
@@ -149,7 +193,7 @@
             width: 130px;
             font-size: medium;
         }
-        #FinalProject3{
+        #FinalProject2-2{
             background-color: aliceblue;
             border-top: solid 3px;
             border-right: solid 3px;
@@ -176,7 +220,7 @@
         <div class="outwrap">
 
             <div class="inwrap">
-                <h5>TODAY 1 |  TOTAL 715</h5>
+                <h5>TODAY 1 |  TOTAL 423</h5>
                 <div id="title">최정운을 소개합니다.</div>
                 <div class="wrap1">
                     <img src="/미니미.jpg">
@@ -254,23 +298,68 @@
 
                 </div>
                 <div class="wrap2">
-                    <h2> 개발환경 , DB </h2>
+                    <div id="wrap2">
+                        <hr>
+                        <h2>담당 역할 2 : QNA 게시판 </h2>
+                        <hr>
+                    <div class="qna">    
+                        <img id="qna-main" src="/qna-main.JPG">
+                        <div id="main-text">
+                            <text>main</text>
+                        </div>
+                        <img id="qna-list" src="/QNA-LIST.JPG">
+                        <div id="list-text">
+                            <text>1. list에는 db에 저장된 QNA 목록이 나타나게 하였습니다. 
+                                <br>
+                                2. 제목 검색 기능이 가능합니다. 
+                                <br>
+                                3. write을 누르면 작성하기 화면으로 이동합니다.
+                                <br>
+                                (멤버 로그인 상태에서만 write 버튼이 나타납니다.)
+                                <br>
+                                4. 게시물 조회수가 나타납니다.
+                                <br>
+                                5. 페이지네이션은 최대 5 페이지입니다. </text>
+                                <hr>
+                        </div>
+                        <br>
+                        <img id="qna-detail" src="/qna-detail.JPG">
+                        <div id="detail-text">
+                            <text>1.관리자 로그인 시에만 답변하기 , 삭제하기 버튼이 나타납니다. 
+                                <br>
+                                답변하기 버튼 클릭 시 답변 칸에 입력할 수 있게 됩니다.
+                                <br>
+                                2. 답변완료 클릭 시 성공했다는 알림이 뜹니다.</text>
+                                <hr>
+                        </div>
+                        <br>
+                        <img id="qna-edit" src="/qna-edit.JPG">
+                        <div id="edit-text">
+                            <text>1.list에서 선택한 게시물의 상세조회가 나타납니다.
+                                <br>
+                                2. 목록 버튼 클릭 시 list화면으로 이동합니다.
+                                <br>
+                                3.수정하기 버튼 클릭 시 수정 작성화면으로 이동하고 삭제하기 클릭 시 db에 저장된 게시물이 삭제됩니다.  (수정하기, 삭제하기 버튼은 본인이 작성한 글에서만 나타납니다.)
+                                <br>
+                                4. 게시물을 수정하거나 삭제할시 성공했다는 알림이 뜹니다.</text>
+                        </div>
+                    </div>
+                </div>
+            </div>
                     <div id="category">
                         <a href="inf.html">
                             <button>Inf</button>
                         </a>
-                        <a href="Final-Project1.html">
+                        <a href="FP1.html">
                             <button>Final Project1</button>
                         </a>
-                        <a href="Final-Project2-1.html">
+                        <a href="FP2-1.html">
                             <button>Final Project2-1</button>
                         </a>
-                        <a href="Final-Project2-2.html">
-                            <button>Final Project2-2</button>
+                        <button id="FinalProject2-2">Final Project2-2</button>
+                        <a href="FP3.html">
+                            <button>Final Project3</button>
                         </a>
-
-                            <button id="FinalProject3">Final Project3</button>
-
                         <a href="End.html">
                             <button>End</button>
                         </a>

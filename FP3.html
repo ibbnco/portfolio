@@ -63,7 +63,7 @@
             width: 210px;
             height: 150px;;
         }
-        .wrap1 > hr{
+        hr{
             border: 1px dotted #000;
             width: 220px;
         }
@@ -125,56 +125,20 @@
             border: solid 3px;
             border-radius: 15px;
             float: right;
-            
         }
-        #wrap2{
 
-            overflow-y: scroll;
-            height: 550px;
-            margin-right: 7px;
-            margin-top: 3px;
-        }
         h2 {
-            margin-left: 25%;
-        }
-        hr {
-            background-color: rgb(141, 251, 201);
-            height: 1px;
-        }
-        .job{
-            margin-left: 33px;
-            width: 535px;
-            height: 1800px;
-        }
-        #job-list{
-            margin-top: 5px;
-            margin-left: 2px;
-            width: 530px;
-            height: 400px;
-            border-radius: 10px;
-        }
-        #job-detail{
-            margin-top: 5px;
-            margin-left: 2px;
-            width: 530px;
-            height: 400px;
-            border-radius: 10px;
-        }
-        #job-write{
-            margin-top: 5px;
-            margin-left: 2px;
-            width: 530px;
-            height: 800px;
-            border-radius: 10px;
+            margin-left: 41%;
         }
 
         #category {
             margin-left: 530px;
-            margin-top: -548px;
+            margin-top: -67.5px;
             width: 20px;
         }
 
         button {
+            z-index: 2; /* 버튼을 점선 위로 위치시킴 */
             margin-top: 5px;
             margin-bottom: 1px;
             margin-left: 70px;
@@ -185,7 +149,7 @@
             width: 130px;
             font-size: medium;
         }
-        #FinalProject2-1{
+        #FinalProject3{
             background-color: aliceblue;
             border-top: solid 3px;
             border-right: solid 3px;
@@ -212,7 +176,7 @@
         <div class="outwrap">
 
             <div class="inwrap">
-                <h5>TODAY 1 |  TOTAL 423</h5>
+                <h5>TODAY 1 |  TOTAL 715</h5>
                 <div id="title">최정운을 소개합니다.</div>
                 <div class="wrap1">
                     <img src="/미니미.jpg">
@@ -221,7 +185,7 @@
                         <text>TODAY IS...</text>
                         <text>HAPPY</text>
                     </div>
-                    <div id="message" class="scrollable-div">
+                    <div id="message">
                         포트폴리오 만들기
                         <br>
                         포트폴리오 만들기
@@ -233,6 +197,14 @@
                         포트폴리오 만들기
                         <br>
                         포트폴리오 만들기
+                        <br>포트폴리오 만들기
+                        <br>
+                        포트폴리오 만들기
+                        <br>
+                        포트폴리오 만들기
+                        <br>
+                        포트폴리오 만들기
+                        <br>포트폴리오 만들기
                         <br>
                         포트폴리오 만들기
                         <br>
@@ -243,6 +215,14 @@
                         포트폴리오 만들기
                         <br>
                         포트폴리오 만들기
+                        <br>포트폴리오 만들기
+                        <br>
+                        포트폴리오 만들기
+                        <br>
+                        포트폴리오 만들기
+                        <br>
+                        포트폴리오 만들기
+                        <br>포트폴리오 만들기
                         <br>
                         포트폴리오 만들기
                         <br>
@@ -253,8 +233,7 @@
                         포트폴리오 만들기
                         <br>
                         포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
+                        <br>포트폴리오 만들기
                         <br>
                         포트폴리오 만들기
                         <br>
@@ -275,81 +254,26 @@
 
                 </div>
                 <div class="wrap2">
-                    <div id="wrap2">
-                        <hr>
-                        <h2>담당 역할 1 : JOB 게시판 </h2>
-                        <hr>
-                        <div class="job">    
-                            <div class="list">
+                    <h2> 개발환경 , DB </h2>
+                    <div id="category">
+                        <a href="inf.html">
+                            <button>Inf</button>
+                        </a>
+                        <a href="FP1.html">
+                            <button>Final Project1</button>
+                        </a>
+                        <a href="FP2-1.html">
+                            <button>Final Project2-1</button>
+                        </a>
+                        <a href="FP2-2.html">
+                            <button>Final Project2-2</button>
+                        </a>
 
-                                <img id="job-list" src="/JOB-LIST.JPG">
-                                <div id="list-text">
-                                    <text>
-                                        <br>
-                                        1. list에는 db에 저장된 job게시물 목록이 나타나게 하였습니다. 
-                                        <br>
-                                    2. 제목 검색 기능이 가능합니다. 
-                                    <br>
-                                    3. write을 누르면 작성하기 화면으로 이동합니다.
-                                    <br>
-                                    (멤버 로그인 상태에서만 write 버튼이 나타납니다.)
-                                    <br>
-                                    4. 게시물 조회수가 나타납니다.
-                                    <br>
-                                    5. 페이지네이션은 최대 5 페이지입니다. </text>
-                            </div>
-                            <hr>
-                            <br>
-                        </div>
-                        <div class="detail">
-                            <img id="job-detail" src="/JOB-DATAIL.JPG">
-                            <div id="detail-text">
-                                <text>1.list에서 선택한 게시물의 상세조회가 나타납니다.
-                                    <br> 
-                                    2. 목록 버튼 클릭 시 list화면으로 이동합니다.
-                                    <br>
-                                    3.수정하기 버튼 클릭 시 수정 작성화면으로 이동하고 삭제하기 클릭 시 db에 저장된 게시물이 삭제됩니다.  (수정하기, 삭제하기 버튼은 본인이 작성한 글에서만 나타납니다. 또한 관리자 로그인시 삭제하기 버튼만 나타납니다.)
-                                    <br>
-                                    4.댓글을 작성할 수 있습니다. db에 저장된 댓글 조회, 본인이 작성한 댓글 삭제 기능도 가능합니다.
-                                    <br>
-                                    5. 게시물이나 댓글을 수정하거나 삭제할시 성공했다는 알림이 뜹니다.</text>
-                                    <hr>
-                                </div>
-                        </div>
-                        <div class="write">
+                            <button id="FinalProject3">Final Project3</button>
 
-                            <img id="job-write" src="/job-write .JPG">
-                            <div id="write-text">
-                                <text>1. 작성 시 제목, 내용, 구인구직 선택, 지역 선택을 후 db저장합니다. 
-                                    <br>
-                                    2. 파일을 선택하거나 드래그하여 업로드가 가능합니다. 
-                                    <br>
-                                    3. 등록 버튼 클릭 후 작성완료 시  성공 알림이 뜹니다.
-                                    <br>
-                                    4. 취소 버튼 클릭 시 list화면으로 이동합니다.</text>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                        <div id="category">
-                            <a href="inf.html">
-                                <button>Inf</button>
-                            </a>
-                            <a href="Final-Project1.html">
-                                <button>Final Project1</button>
-                            </a>
-                            <button id="FinalProject2-1">Final Project2-1</button>
-                            <a href="Final-Project2-2.html">
-                        <button>Final Project2-2</button>
-                    </a>
-                    <a href="Final-Project3.html">
-                        <button>Final Project3</button>
-                    </a>
-                    <a href="End.html">
-                        <button>End</button>
-                    </a>
-                    
-                    </div>
+                        <a href="End.html">
+                            <button>End</button>
+                        </a>
                     
                     </div>
 
