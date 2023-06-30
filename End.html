@@ -6,17 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wooni</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/message-scroll.js"></script>
     <style>
         body {
             background-color: rgb(155, 158, 155);
         }
 
+        .side{
+            margin-left: 78%;
+            margin-top: 4%;
+            background-color: rgb(222, 250, 222);
+            width: 300px;
+            height: 100px;
+            border: solid 3px;
+            border-radius: 15px;
+        }
+
+        .music {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        }
+
+        .music::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        vertical-align: middle;
+        }
+
+        .music > * {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll 15s linear infinite;
+        }
+
+        @keyframes scroll {
+        0% {
+            transform: translateX(-1%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+        }
+
         .outwrap {
             margin-left: 5%;
-            margin-top: 2%;
+            margin-top: -6.1%;
             background-color: rgb(222, 250, 222);
-            width: 1000px;
+            width: 1100px;
             height: 700px;
             border: solid 3px;
             border-radius: 15px;
@@ -64,8 +105,8 @@
             height: 150px;;
         }
         hr{
-            border: 1px dotted #000;
-            width: 220px;
+            background-color: rgb(141, 251, 201);
+            height: 1px;
         }
         #feeling{
             border: solid 2px;
@@ -97,7 +138,6 @@
             float: left;
             margin-top: -19px;
             margin-left: 78px;
-            border: solid black 1px;
             border-radius: 2px;
             color: red;
         }
@@ -126,6 +166,12 @@
             border-radius: 15px;
             float: right;
         }
+        #wrap2{
+            overflow-y: scroll;
+            height: 550px;
+            margin-right: 7px;
+            margin-top: 3px;
+        }
 
         h2 {
             margin-left: 46%;
@@ -133,7 +179,7 @@
 
         #category {
             margin-left: 530px;
-            margin-top: -67.5px;
+            margin-top: -548.5px;
             width: 20px;
         }
 
@@ -164,20 +210,47 @@
         a {
             text-decoration: none;
         }
+        .audio-player {
+
+        margin-left: 4px;
+        width: 270px;
+        background-color: #f1f1f1;
+        padding: 10px;
+        border-radius: 5px;
+        height: 33px;
+        }
+
+        .audio-player audio {
+        width: 100%;
+        }
+
+        .controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        }
     </style>
 </head>
 
 <body>
     <main>
         <div class="side">
-            <div id="side bar"></div>
-            <div id=""></div>
+  
+            <div class="audio-player">
+                <div class="music">
+                    <div id="scrolling-text">.........달리기- 옥상달빛</div>
+                </div>
+                    <audio controls>
+                    
+                  </audio>
+              </div>
         </div>
         <div class="outwrap">
 
             <div class="inwrap">
-                <h5>TODAY 1 |  TOTAL 715</h5>
-                <div id="title">최정운을 소개합니다.</div>
+                <h5>TODAY 1 |  TOTAL 423</h5>
+                <div id="title"><a href="https://github.com/taewoon123/LIVELY">
+                    GitHub 주소 : https://github.com/taewoon123/LIVELY</a></div>
                 <div class="wrap1">
                     <img src="img/미니미.jpg">
                     <hr>
@@ -186,43 +259,30 @@
                         <text>HAPPY</text>
                     </div>
                     <div id="message">
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
+                        지겨운가요 힘든가요<br>
+                        숨이 턱까지 찼나요<br>
+                        할 수 없죠<br>
+                        어차피 시작해 버린 것을<br>
+                        쏟아지는 햇살 속에<br>
+                        입이 바싹 말라와도<br>
+                        할 수 없죠<br>
+                        창피하게 멈춰설 순 없으니<br>
+                        단 한 가지 약속은<br>
+                        틀림없이 끝이 있다는 것<br>
+                        끝난 뒤엔 지겨울 만큼<br>
+                        오랫동안 쉴 수 있다는 것<br>
+                        쏟아지는 햇살 속에<br>
+                        입이 바싹 말라와도<br>
+                        할 수 없죠<br>
+                        창피하게 멈춰설 순 없으니<br>
+                        이유도 없이 가끔은<br>
+                        눈물 나게 억울하겠죠<br>
+                        일등 아닌 보통들에겐<br>
+                        박수조차 남의 일인걸<br>
+                        단 한 가지 약속은<br>
+                        틀림없이 끝이 있다는 것<br>
+                        끝난 뒤엔 지겨울 만큼<br>
+                        오랫동안 쉴 수 있다는 것<br>
                     </div>
                     <hr>
                     <div id="name">최정운</div>
@@ -236,10 +296,29 @@
 
                 </div>
                 <div class="wrap2">
-                    <h2>DB</h2>
+                <div id="wrap2">
+                    <hr>
+                    <h2>Review</h2>
+                    <hr>
+                    <strong><center>학원 수강동안 재밌고 즐거웠습니다.</center></strong><br>
+                    학원 수강을 시작하면서 'hello world'를 처음 출력봤을 때는 '오 할만한데'라고<br> 생각했었고 
+                    세미 프로젝트를 jsp, 서블릿을 하면서는  '너무 어렵다 못하겠다' 라는 생각을 했었습니다. <br>
+                    하지만 spring을 배우며 파이널 프로젝트를 하면서는 기획하기, db연결하기, 에러 해결하기, 오타 찾기 등 백엔드도 재미있었고 css, js 프론트엔드 디자인 작업도 재미있었습니다.<br>
+                    코딩에 재미를 붙여가는 제가 신기했습니다. <br>
+                    개발자란 직업, 그리고 몰랐던 코딩을 처음 접하고, 주위에 코딩이 정말 많다는 것을 알게 되었습니다.<br>
+                    예를 들면 지하철역에 도착하면  내릴 문을 알려주는 기능이 있습니다. <br>
+                    코딩을 배우기 전에는 무심코 지나쳤던 것들이 보이기 시작하면서 배운 언어들, 다른 언어들에도 호기심이 생겼습니다.<br>
+                    또한 개발자에게 기술도 중요하지만 팀 프로젝트할 때 의사소통이 중요하다고 생각합니다. 내가 생각하는 바를 정확히 전달하고 팀원의 의견에 귀를 기울이며 <br>
+                    개인 프로젝트가 아닌 팀 프로젝트라는 것은 인식하며 임해야 된다고 생각합니다. <br>
+                    파이널 프로젝트 팀은 모두 빠짐 없이 노력해주었고 서로 의견을 많이 공유하며 좋은 결과를 내서 좋았습니다. 팀원 분들과 좋은 경험과 좋은 추억을 쌓은 것 같아서 즐거웠습니다.
+
+                                       
+
+
+                </div>
                     <div id="category">
                     <a href="inf.html">
-                        <button>Inf</button>
+                        <button>Info</button>
                     </a>
                     <a href="FP1.html">
                         <button>Final Project1</button>
@@ -256,7 +335,6 @@
 
                         <button id="FinalProject4">End</button>
 
-                    
                     </div>
 
                 </div>

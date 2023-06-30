@@ -6,17 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wooni</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/message-scroll.js"></script>
     <style>
         body {
             background-color: rgb(155, 158, 155);
         }
 
+        .side{
+            margin-left: 78%;
+            margin-top: 4%;
+            background-color: rgb(222, 250, 222);
+            width: 300px;
+            height: 100px;
+            border: solid 3px;
+            border-radius: 15px;
+        }
+
+        .music {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        }
+
+        .music::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        vertical-align: middle;
+        }
+
+        .music > * {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll 15s linear infinite;
+        }
+
+        @keyframes scroll {
+        0% {
+            transform: translateX(-1%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+        }
+        
         .outwrap {
             margin-left: 5%;
-            margin-top: 2%;
+            margin-top: -6.1%;
             background-color: rgb(222, 250, 222);
-            width: 1000px;
+            width: 1100px;
             height: 700px;
             border: solid 3px;
             border-radius: 15px;
@@ -47,6 +88,10 @@
 
 
         }
+        hr{
+            background-color: rgb(141, 251, 201);
+            height: 1px;
+        }
 
         .wrap1 {
             margin-left: 1%;
@@ -63,10 +108,7 @@
             width: 210px;
             height: 150px;;
         }
-        .wrap1 > hr{
-            border: 1px dotted #000;
-            width: 220px;
-        }
+        
         #feeling{
             border: solid 2px;
             border-radius: 5px;
@@ -97,7 +139,7 @@
             float: left;
             margin-top: -19px;
             margin-left: 78px;
-            border: solid black 1px;
+
             border-radius: 2px;
             color: red;
         }
@@ -200,20 +242,48 @@
         a {
             text-decoration: none;
         }
+        .audio-player {
+
+        margin-left: 4px;
+        width: 270px;
+        background-color: #f1f1f1;
+        padding: 10px;
+        border-radius: 5px;
+        height: 33px;
+        }
+
+        .audio-player audio {
+        width: 100%;
+        }
+
+        .controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        }
+
     </style>
 </head>
 
 <body>
     <main>
-        <div class="side">
-            <div id="side bar"></div>
-            <div id=""></div>
+         <div class="side">
+  
+            <div class="audio-player">
+                <div class="music">
+                    <div id="scrolling-text">...........달리기- 옥상달빛</div>
+                </div>
+                    <audio controls>
+                    
+                  </audio>
+              </div>
         </div>
         <div class="outwrap">
 
             <div class="inwrap">
                 <h5>TODAY 1 |  TOTAL 423</h5>
-                <div id="title">최정운을 소개합니다.</div>
+                <div id="title"><a href="https://github.com/taewoon123/LIVELY">
+                    GitHub 주소 : https://github.com/taewoon123/LIVELY</a></div>
                 <div class="wrap1">
                     <img src="img/미니미.jpg">
                     <hr>
@@ -222,46 +292,30 @@
                         <text>HAPPY</text>
                     </div>
                     <div id="message" class="scrollable-div">
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
+                        지겨운가요 힘든가요<br>
+                        숨이 턱까지 찼나요<br>
+                        할 수 없죠<br>
+                        어차피 시작해 버린 것을<br>
+                        쏟아지는 햇살 속에<br>
+                        입이 바싹 말라와도<br>
+                        할 수 없죠<br>
+                        창피하게 멈춰설 순 없으니<br>
+                        단 한 가지 약속은<br>
+                        틀림없이 끝이 있다는 것<br>
+                        끝난 뒤엔 지겨울 만큼<br>
+                        오랫동안 쉴 수 있다는 것<br>
+                        쏟아지는 햇살 속에<br>
+                        입이 바싹 말라와도<br>
+                        할 수 없죠<br>
+                        창피하게 멈춰설 순 없으니<br>
+                        이유도 없이 가끔은<br>
+                        눈물 나게 억울하겠죠<br>
+                        일등 아닌 보통들에겐<br>
+                        박수조차 남의 일인걸<br>
+                        단 한 가지 약속은<br>
+                        틀림없이 끝이 있다는 것<br>
+                        끝난 뒤엔 지겨울 만큼<br>
+                        오랫동안 쉴 수 있다는 것<br>
                     </div>
                     <hr>
                     <div id="name">최정운</div>
@@ -333,7 +387,7 @@
                     </div>
                         <div id="category">
                             <a href="inf.html">
-                                <button>Inf</button>
+                                <button>Info</button>
                             </a>
                             <a href="FP1.html">
                                 <button>Final Project1</button>

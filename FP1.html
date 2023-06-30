@@ -4,19 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wooni</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/message-scroll.js"></script>
     <style>
         body {
             background-color: rgb(155, 158, 155);
         }
+        .side{
+            margin-left: 78%;
+            margin-top: 4%;
+            background-color: rgb(222, 250, 222);
+            width: 300px;
+            height: 100px;
+            border: solid 3px;
+            border-radius: 15px;
+        }
 
+        .music {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        }
+
+        .music::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        vertical-align: middle;
+        }
+
+        .music > * {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll 15s linear infinite;
+        }
+
+        @keyframes scroll {
+        0% {
+            transform: translateX(-1%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+        }
         .outwrap {
             margin-left: 5%;
-            margin-top: 2%;
+            margin-top: -6.1%;
             background-color: rgb(222, 250, 222);
-            width: 1000px;
+            width: 1100px;
             height: 700px;
             border: solid 3px;
             border-radius: 15px;
@@ -64,8 +102,8 @@
             height: 150px;;
         }
         hr{
-            border: 1px dotted #000;
-            width: 220px;
+            background-color: rgb(141, 251, 201);
+            height: 1px;
         }
         #feeling{
             border: solid 2px;
@@ -93,11 +131,11 @@
             margin-left: 24px;
         }
         i{
-            width: 10px;
+            width: 23px;
             float: left;
             margin-top: -19px;
             margin-left: 78px;
-            border: solid black 1px;
+            
             border-radius: 2px;
             color: red;
         }
@@ -126,13 +164,22 @@
             border-radius: 15px;
             float: right;
         }
+        #wrap2{
+            overflow-y: scroll;
+            height: 550px;
+            margin-right: 7px;
+            margin-top: 3px;
+        }
 
         h2 {
             margin-left: 16%;
             margin-top: -41px;
         }
+        #period{
+            margin-left: 310px;
+        }
         #livelyLogo{
-            margin-top: 20px;
+            margin-top: 10px;
             margin-left: 320px;
             height: 40px;
         }
@@ -149,8 +196,8 @@
         }
 
         #category {
-            margin-left: 530px;
-            margin-top: -229px;
+            margin-left: 801px;
+            margin-top: -568px;
             width: 20px;
         }
 
@@ -181,14 +228,48 @@
         a {
             text-decoration: none;
         }
+        .audio-player {
+        margin-left: 4px;
+        width: 270px;
+        background-color: #f1f1f1;
+        padding: 10px;
+        border-radius: 5px;
+        height: 33px;
+        }
+
+        .audio-player audio {
+        width: 100%;
+        }
+
+        .controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        }
+
+        .controls i {
+        margin: 0 5px;
+        font-size: 20px;
+        color: #333;
+        }
+         td{
+            border: solid black 1px;
+        }
     </style>
 </head>
 
 <body>
     <main>
-        <div class="side">
-            <div id="side bar"></div>
-            <div id=""></div>
+         <div class="side">
+  
+            <div class="audio-player">
+                <div class="music">
+                    <div id="scrolling-text">.........달리기- 옥상달빛</div>
+                </div>
+                    <audio controls>
+                    
+                  </audio>
+              </div>
         </div>
         <div class="outwrap">
 
@@ -206,40 +287,30 @@
                         <text>HAPPY</text>
                     </div>
                     <div id="message">
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
+                        지겨운가요 힘든가요<br>
+                        숨이 턱까지 찼나요<br>
+                        할 수 없죠<br>
+                        어차피 시작해 버린 것을<br>
+                        쏟아지는 햇살 속에<br>
+                        입이 바싹 말라와도<br>
+                        할 수 없죠<br>
+                        창피하게 멈춰설 순 없으니<br>
+                        단 한 가지 약속은<br>
+                        틀림없이 끝이 있다는 것<br>
+                        끝난 뒤엔 지겨울 만큼<br>
+                        오랫동안 쉴 수 있다는 것<br>
+                        쏟아지는 햇살 속에<br>
+                        입이 바싹 말라와도<br>
+                        할 수 없죠<br>
+                        창피하게 멈춰설 순 없으니<br>
+                        이유도 없이 가끔은<br>
+                        눈물 나게 억울하겠죠<br>
+                        일등 아닌 보통들에겐<br>
+                        박수조차 남의 일인걸<br>
+                        단 한 가지 약속은<br>
+                        틀림없이 끝이 있다는 것<br>
+                        끝난 뒤엔 지겨울 만큼<br>
+                        오랫동안 쉴 수 있다는 것<br>
                     </div>
                     <hr>
                     <div id="name">최정운</div>
@@ -253,10 +324,57 @@
 
                 </div>
                 <div class="wrap2">
+                <div id="wrap2">
+
+                    <hr>
                     <img id="livelyLogo" src="img/lively로고.png">
                     <h2>파이널 프로젝트 :  </h2>
+                    <hr>
                     <div class="lively">
-                    <img id="lively" src="img/lively메인.png">
+                        <text id="period">수행기간 : 2023.04 - 2023.06</text>
+                        <img id="lively" src="img/lively메인.png">
+                        <table>
+                            <tr>
+                                <td><strong><center>목표</center></strong></td>
+                                <td> 지역 주민들이 서로 공유할 수 있는 지역 커뮤니티 웹사이트 만들기</td>
+                            </tr>
+                            <tr>
+                                <td><strong><center>개발 목표</center></strong></td>
+                                <td>1. 지역커뮤니티 게시판<br>
+                                    2. 실시간 정보<br>
+                                    3. 채팅
+                                   </td>
+                            </tr>
+                            <tr>
+                                <td><strong><center>프로젝트 시 
+                                    활용해본 
+                                    대표 기술<center></strong></td>
+                                <td>api를 이용한 실시간 교통상황, 친구, 중고거래 채팅, 게시판 댓글, 조회수 등</td>
+                            </tr>
+                            <tr>
+                                <td><strong><center>구현 기능</center></strong></td>
+                                <td>1. 기본기능<br>
+                                    - 회원가입, 로그인, 로그아웃, 정보수정 계정복구, 삭제, 관리자개인정보저장, 
+                                      관리자 도구<br>
+                                    2. 편의성 기능<br>
+                                    - 질문게시판, 중고거래게시판, 도움&기부게시판, 친목도모게시판, 댓글기능, <br>
+                                      동영상/사진업로드기능, contact us<br>
+                                    3. 차별성 기능<br>
+                                    - 실시간 위치 기반 서비스, 주변교통현황, 주변사건사고, 사건 indicator</td>
+                            </tr>
+                            <tr>
+                                <td><strong><center>담당 역할</center></strong></td>
+                                <td>job, qna 게시판 <br>
+                                    [기여도] 16% (팀원 6명)
+                                </td>
+                            </tr>
+
+                        </table>
+                        </div>
+
+
+                    </text>
+                    </div>
                     </div>
 
 
@@ -264,7 +382,7 @@
 
                     <div id="category">
                         <a href="inf.html">
-                            <button>Inf</button>
+                            <button>Info</button>
                         </a>
                         <button id="FinalProject1">Final Project1</button>
                     <a href="FP2-1.html">

@@ -6,17 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wooni</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/message-scroll.js"></script>
     <style>
         body {
             background-color: rgb(155, 158, 155);
         }
 
+        .side{
+            margin-left: 78%;
+            margin-top: 4%;
+            background-color: rgb(222, 250, 222);
+            width: 300px;
+            height: 100px;
+            border: solid 3px;
+            border-radius: 15px;
+        }
+
+        .music {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        }
+
+        .music::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        vertical-align: middle;
+        }
+
+        .music > * {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll 15s linear infinite;
+        }
+
+        @keyframes scroll {
+        0% {
+            transform: translateX(-1%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+        }
+        
         .outwrap {
             margin-left: 5%;
-            margin-top: 2%;
+            margin-top: -6.1%;
             background-color: rgb(222, 250, 222);
-            width: 1000px;
+            width: 1100px;
             height: 700px;
             border: solid 3px;
             border-radius: 15px;
@@ -64,8 +105,8 @@
             height: 150px;;
         }
         hr{
-            border: 1px dotted #000;
-            width: 220px;
+            background-color: rgb(141, 251, 201);
+            height: 1px;
         }
         #feeling{
             border: solid 2px;
@@ -97,7 +138,6 @@
             float: left;
             margin-top: -19px;
             margin-left: 78px;
-            border: solid black 1px;
             border-radius: 2px;
             color: red;
         }
@@ -126,14 +166,37 @@
             border-radius: 15px;
             float: right;
         }
+        #wrap2{
+            overflow-y: scroll;
+            height: 550px;
+            margin-right: 7px;
+            margin-top: 3px;
+        }
 
         h2 {
             margin-left: 46%;
         }
 
+        .choi{
+            margin-top: 10px;
+            width: 200px;
+            height: 280px;
+        }
+        .info{
+            float: right;
+            margin-top: 20px;
+            width: 300px;
+
+        }
+        .edu{
+            margin-top: 20px;
+            margin-left: 60px;
+            width: 500px;
+
+        }
         #category {
             margin-left: 530px;
-            margin-top: -68px;
+            margin-top: -548px;
             width: 20px;
         }
 
@@ -156,6 +219,11 @@
             border-bottom: solid 3px;
             border-left: none;
         }
+        table {
+            width: 300px;
+
+            height: 260px;
+        }
 
         button:hover {
             background-color: rgb(53, 252, 66);
@@ -164,20 +232,48 @@
         a {
             text-decoration: none;
         }
+        .audio-player {
+
+        margin-left: 4px;
+        width: 270px;
+        background-color: #f1f1f1;
+        padding: 10px;
+        border-radius: 5px;
+        height: 33px;
+        }
+
+        .audio-player audio {
+        width: 100%;
+        }
+
+        .controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        }
+
     </style>
 </head>
 
 <body>
     <main>
         <div class="side">
-            <div id="side bar"></div>
-            <div id=""></div>
+  
+            <div class="audio-player">
+                <div class="music">
+                    <div id="scrolling-text"><center> ........달리기- 옥상달빛</center></div>
+                </div>
+                    <audio controls>
+                    
+                  </audio>
+              </div>
         </div>
         <div class="outwrap">
 
             <div class="inwrap">
                 <h5>TODAY 1 |  TOTAL 423</h5>
-                <div id="title">최정운을 소개합니다.</div>
+                <div id="title"><a href="https://github.com/taewoon123/LIVELY">
+                    GitHub 주소 : https://github.com/taewoon123/LIVELY</a></div>
                 <div class="wrap1">
                     <img src="img/미니미.jpg">
                     <hr>
@@ -186,34 +282,30 @@
                         <text>HAPPY</text>
                     </div>
                     <div id="message" class="scrollable-div">
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
+                        지겨운가요 힘든가요<br>
+                        숨이 턱까지 찼나요<br>
+                        할 수 없죠<br>
+                        어차피 시작해 버린 것을<br>
+                        쏟아지는 햇살 속에<br>
+                        입이 바싹 말라와도<br>
+                        할 수 없죠<br>
+                        창피하게 멈춰설 순 없으니<br>
+                        단 한 가지 약속은<br>
+                        틀림없이 끝이 있다는 것<br>
+                        끝난 뒤엔 지겨울 만큼<br>
+                        오랫동안 쉴 수 있다는 것<br>
+                        쏟아지는 햇살 속에<br>
+                        입이 바싹 말라와도<br>
+                        할 수 없죠<br>
+                        창피하게 멈춰설 순 없으니<br>
+                        이유도 없이 가끔은<br>
+                        눈물 나게 억울하겠죠<br>
+                        일등 아닌 보통들에겐<br>
+                        박수조차 남의 일인걸<br>
+                        단 한 가지 약속은<br>
+                        틀림없이 끝이 있다는 것<br>
+                        끝난 뒤엔 지겨울 만큼<br>
+                        오랫동안 쉴 수 있다는 것<br>
                     </div>
                     <hr>
                     <div id="name">최정운</div>
@@ -227,9 +319,57 @@
 
                 </div>
                 <div class="wrap2">
-                    <h2>최정운</h2>
-                    <div id="category">
-                        <button id="inf">Inf</button>
+                    <div id="wrap2">
+                        <hr>
+                        <h2>Info</h2>
+                        <hr>
+                        <img class="choi" src="img/KakaoTalk_20230617_160745211_02.jpg">
+                        <div class="info">
+                            <table>
+                                <tr>
+                                    <td><strong>이름</strong></td>
+                                    <td>한글 : 최정운 <br> 영문 : Choi Jeong Woon</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>생년월일</strong></td>
+                                    <td>1997 .04 .23</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>전화번호</strong></td>
+                                    <td>010-2719-8332</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>이메일</strong></td>
+                                    <td>z7wjddns7z@naver.com</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>주소</strong></td>
+                                    <td>서울특별시 독산동 961-4 1층</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <br>
+                        <br>
+                            <div class="edu"><strong>학력 사항 </strong><br>
+                                2022.11 - 2023.06 <strong>KH정보교육원 </strong>(디지털컨버전스)자바(JAVA)기반 <br>공공데이터 융합 개발자 양성과정 수료<br>
+                                2016.03 - 2022.02 <strong>세명대학교 </strong>경찰행정학과 학사 졸업<br>
+                                2013.03 - 2016.02 <strong>세명고등학교</strong> 졸업
+                            </div>
+
+                            <div class="edu"><strong>사회 경험</strong><br>
+                                2022.03 ~  <strong>할리스 커피 </strong> 고객응대, 음료제조, 청소<br>
+                                2021.06 ~ 2022.02 <strong>이디야 커피 </strong> 고객응대, 음료제조, 청소<br>
+                                2018.07   <strong>세명대학교 방학 토익프로그램 </strong> 보조 교사<br>
+                                2018.01   <strong>세명대학교 방학 토익프로그램 </strong> 보조 교사<br>
+                                2017.07   <strong>세명대학교 방학 토익프로그램 </strong> 보조 교사<br>
+                                
+                            </div>
+                            
+
+                    </div>
+                        <div id="category">
+                            <button id="inf">Info</button>
                     <a href="FP1.html">
                         <button>Final Project1</button>
                     </a>

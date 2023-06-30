@@ -6,17 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>wooni</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="js/message-scroll.js"></script>
     <style>
         body {
             background-color: rgb(155, 158, 155);
         }
 
+        .side{
+            margin-left: 78%;
+            margin-top: 4%;
+            background-color: rgb(222, 250, 222);
+            width: 300px;
+            height: 100px;
+            border: solid 3px;
+            border-radius: 15px;
+        }
+
+        .music {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        }
+
+        .music::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        vertical-align: middle;
+        }
+
+        .music > * {
+        display: inline-block;
+        white-space: nowrap;
+        animation: scroll 15s linear infinite;
+        }
+
+        @keyframes scroll {
+        0% {
+            transform: translateX(-1%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+        }
+
         .outwrap {
             margin-left: 5%;
-            margin-top: 2%;
+            margin-top: -6.1%;
             background-color: rgb(222, 250, 222);
-            width: 1000px;
+            width: 1100px;
             height: 700px;
             border: solid 3px;
             border-radius: 15px;
@@ -64,8 +105,8 @@
             height: 150px;;
         }
         hr{
-            border: 1px dotted #000;
-            width: 220px;
+            background-color: rgb(141, 251, 201);
+            height: 1px;
         }
         #feeling{
             border: solid 2px;
@@ -97,7 +138,7 @@
             float: left;
             margin-top: -19px;
             margin-left: 78px;
-            border: solid black 1px;
+
             border-radius: 2px;
             color: red;
         }
@@ -126,6 +167,18 @@
             border-radius: 15px;
             float: right;
         }
+        #wrap2{
+            overflow-y: scroll;
+            height: 550px;
+            margin-right: 7px;
+            margin-top: 3px;
+        }
+        #wrap2 > img {
+
+            margin-top: -10px;
+            width: 500px;
+            height: 300px;
+        }
 
         h2 {
             margin-left: 41%;
@@ -133,7 +186,7 @@
 
         #category {
             margin-left: 530px;
-            margin-top: -67.5px;
+            margin-top: -548px;
             width: 20px;
         }
 
@@ -157,27 +210,73 @@
             border-left: none;
         }
 
-        button:hover {
-            background-color: rgb(53, 252, 66);
-        }
 
         a {
             text-decoration: none;
         }
+
+        .audio-player {
+
+        margin-left: 4px;
+        width: 270px;
+        background-color: #f1f1f1;
+        padding: 10px;
+        border-radius: 5px;
+        height: 33px;
+        }
+
+        .audio-player audio {
+        width: 100%;
+        }
+
+        .controls {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        }
+        .content {
+        display: none;
+        margin-left: 50px; /* 버튼 클릭 전에는 내용을 숨깁니다 */
+        }
+        #button {
+        padding: 10px 20px;
+        background-color: #95f198;
+
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        width: 160px;
+        margin-left: 50px;
+        
+        }
+
+        #button:hover {
+        background-color: #45a049;
+        }
+
     </style>
 </head>
 
 <body>
     <main>
         <div class="side">
-            <div id="side bar"></div>
-            <div id=""></div>
+  
+            <div class="audio-player">
+                <div class="music"> 
+                    <div id="scrolling-text">...........달리기- 옥상달빛</div>
+                </div>
+                    <audio controls>
+                    
+                  </audio>
+              </div>
         </div>
         <div class="outwrap">
 
             <div class="inwrap">
-                <h5>TODAY 1 |  TOTAL 715</h5>
-                <div id="title">최정운을 소개합니다.</div>
+                <h5>TODAY 1 |  TOTAL 423</h5>
+                <div id="title"><a href="https://github.com/taewoon123/LIVELY">
+                    GitHub 주소 : https://github.com/taewoon123/LIVELY</a></div>
                 <div class="wrap1">
                     <img src="img/미니미.jpg">
                     <hr>
@@ -186,61 +285,30 @@
                         <text>HAPPY</text>
                     </div>
                     <div id="message">
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
-                        포트폴리오 만들기
-                        <br>
+                        지겨운가요 힘든가요<br>
+                        숨이 턱까지 찼나요<br>
+                        할 수 없죠<br>
+                        어차피 시작해 버린 것을<br>
+                        쏟아지는 햇살 속에<br>
+                        입이 바싹 말라와도<br>
+                        할 수 없죠<br>
+                        창피하게 멈춰설 순 없으니<br>
+                        단 한 가지 약속은<br>
+                        틀림없이 끝이 있다는 것<br>
+                        끝난 뒤엔 지겨울 만큼<br>
+                        오랫동안 쉴 수 있다는 것<br>
+                        쏟아지는 햇살 속에<br>
+                        입이 바싹 말라와도<br>
+                        할 수 없죠<br>
+                        창피하게 멈춰설 순 없으니<br>
+                        이유도 없이 가끔은<br>
+                        눈물 나게 억울하겠죠<br>
+                        일등 아닌 보통들에겐<br>
+                        박수조차 남의 일인걸<br>
+                        단 한 가지 약속은<br>
+                        틀림없이 끝이 있다는 것<br>
+                        끝난 뒤엔 지겨울 만큼<br>
+                        오랫동안 쉴 수 있다는 것<br>
                     </div>
                     <hr>
                     <div id="name">최정운</div>
@@ -254,10 +322,806 @@
 
                 </div>
                 <div class="wrap2">
+                <div id="wrap2">
+                    <hr>
                     <h2> 개발환경 , DB </h2>
+                    <hr>
+                    <br>
+                    <img src="img/개발환경.png">
+                    <br>
+                    <br>
+                    <div id="button" onclick="toggleContent()">DB (누르면 나옵니다.)</div>
+                    <div id="content" class="content">
+                        <!-- 내용을 여기에 작성합니다 -->
+                        --TABLE DROP
+DROP TABLE member CASCADE CONSTRAINTS;<br>
+
+DROP TABLE friend CASCADE CONSTRAINTS;<br>
+
+DROP TABLE query CASCADE CONSTRAINTS;<br>
+
+DROP TABLE admin CASCADE CONSTRAINTS;<br>
+
+DROP TABLE job CASCADE CONSTRAINTS;<br>
+
+DROP TABLE help CASCADE CONSTRAINTS;<br>
+
+DROP TABLE job_reply CASCADE CONSTRAINTS;<br>
+
+DROP TABLE fri_reply CASCADE CONSTRAINTS;<br>
+
+DROP TABLE query_reply CASCADE CONSTRAINTS;<br>
+
+DROP TABLE job_attach CASCADE CONSTRAINTS;<br>
+
+DROP TABLE fund_reply CASCADE CONSTRAINTS;<br>
+
+DROP TABLE fund_attach CASCADE CONSTRAINTS;<br>
+
+DROP TABLE market CASCADE CONSTRAINTS;<br>
+
+DROP TABLE notice CASCADE CONSTRAINTS;<br>
+
+DROP TABLE market_attach CASCADE CONSTRAINTS;<br>
+
+DROP TABLE fri_attach CASCADE CONSTRAINTS;<br>
+
+DROP TABLE query_attach CASCADE CONSTRAINTS;<br>
+
+DROP TABLE location CASCADE CONSTRAINTS;<br>
+
+DROP TABLE help_reply CASCADE CONSTRAINTS;<br>
+
+DROP TABLE qna CASCADE CONSTRAINTS;<br>
+
+DROP TABLE help_attach CASCADE CONSTRAINTS;<br>
+
+DROP TABLE fundraise CASCADE CONSTRAINTS;<br>
+
+DROP TABLE gender CASCADE CONSTRAINTS;<br>
+
+--SEQUENCE DROP<br>
+DROP SEQUENCE seq_member_no;<br>
+
+DROP SEQUENCE seq_friend_no;<br>
+
+DROP SEQUENCE seq_query_no;<br>
+
+DROP SEQUENCE seq_admin_no;<br>
+
+DROP SEQUENCE seq_job_no;<br>
+
+DROP SEQUENCE seq_help_no;<br>
+
+DROP SEQUENCE seq_job_reply_no;<br>
+
+DROP SEQUENCE seq_fri_reply_no;<br>
+
+DROP SEQUENCE seq_query_reply_no;<br>
+
+DROP SEQUENCE seq_job_attach_no;<br>
+
+DROP SEQUENCE seq_fund_reply_no;<br>
+
+DROP SEQUENCE seq_fund_attach_no;<br>
+
+DROP SEQUENCE seq_market_no;<br>
+
+DROP SEQUENCE seq_notice_no;<br>
+
+DROP SEQUENCE seq_market_attach_no;<br>
+
+DROP SEQUENCE seq_fri_attach_no;<br>
+
+DROP SEQUENCE seq_query_attach_no;<br>
+
+DROP SEQUENCE seq_location_no;<br>
+
+DROP SEQUENCE seq_help_reply_no;<br>
+
+DROP SEQUENCE seq_qna_no;<br>
+
+DROP SEQUENCE seq_help_attach_no;<br>
+
+DROP SEQUENCE seq_fundraise_no;<br>
+
+DROP SEQUENCE seq_gender_no;<br>
+
+DROP TABLE job_category CASCADE CONSTRAINTS;<br>
+
+
+--TABLE 생성<br>
+
+CREATE TABLE member (<br>
+    no          NUMBER NOT NULL,<br>
+    name        VARCHAR2(20) NOT NULL,<br>
+    id          VARCHAR2(20) NOT NULL,<br>
+    pwd         VARCHAR2(100) NOT NULL,<br>
+    birth       CHAR(10) NOT NULL,<br>
+    hp          CHAR(11) NOT NULL,<br>
+    email       VARCHAR2(50) NOT NULL,<br>
+    quit_yn     CHAR(1) DEFAULT 'N',<br>
+    join_date   TIMESTAMP DEFAULT sysdate,<br>
+    location_no NUMBER NOT NULL,<br>
+    gender_code NUMBER NOT NULL<br>
+);<br>
+
+CREATE TABLE friend (<br>
+    friend_no   NUMBER NOT NULL,<br>
+    writer      NUMBER NOT NULL,<br>
+    title       VARCHAR2(100) NOT NULL,<br>
+    content     VARCHAR2(4000) NOT NULL,<br>
+    enroll_date TIMESTAMP DEFAULT sysdate,<br>
+    delete_yn   CHAR(1) DEFAULT 'N',<br>
+    edit_date   TIMESTAMP DEFAULT sysdate,<br>
+    location_no NUMBER NOT NULL,<br>
+    status_yn   CHAR(1) DEFAULT 'Y'<br>
+);<br>
+
+CREATE TABLE query(<br>
+    query_no    NUMBER NOT NULL,<br>
+    title       VARCHAR2(100) NOT NULL,<br>
+    content     VARCHAR2(4000) NOT NULL,<br>
+    enroll_date TIMESTAMP DEFAULT sysdate,<br>
+    writer      NUMBER NOT NULL,<br>
+    edit_date   TIMESTAMP DEFAULT sysdate,<br>
+    delete_yn   CHAR(1) DEFAULT 'N',<br>
+    location_no NUMBER,<br>
+    views       NUMBER DEFAULT '0'<br>
+);<br>
+
+CREATE TABLE admin (<br>
+    admin_no  NUMBER NOT NULL,<br>
+    admin_id  VARCHAR2(20) NOT NULL,<br>
+    admin_pwd VARCHAR2(100) NOT NULL<br>
+);<br>
+
+CREATE TABLE job (<br>
+    job_no          NUMBER NOT NULL,<br>
+    title           VARCHAR2(100) NOT NULL,<br>
+    content         VARCHAR2(4000) NOT NULL,<br>
+    enroll_date     TIMESTAMP DEFAULT sysdate,<br>
+    writer          NUMBER NOT NULL,<br>
+    edit_date       TIMESTAMP DEFAULT sysdate,<br>
+    delete_yn       CHAR(1) DEFAULT 'N',<br>
+    views           NUMBER DEFAULT '0',<br>
+    job_category_no	NUMBER	NOT NULL,<br>
+		location_no NUMBER NOT NULL<br>
+);<br>
+
+CREATE TABLE help (<br>
+    help_no     NUMBER NOT NULL,<br>
+    title       VARCHAR2(100) NOT NULL,<br>
+    content     VARCHAR2(4000) NOT NULL,<br>
+    enroll_date TIMESTAMP DEFAULT sysdate,<br>
+    writer      NUMBER NOT NULL,<br>
+    edit_date   TIMESTAMP DEFAULT sysdate,<br>
+    delete_yn   CHAR(1) DEFAULT 'N',<br>
+    location_no NUMBER,<br>
+    views       NUMBER DEFAULT '0'<br>
+);<br>
+
+CREATE TABLE job_reply (<br>
+    job_reply_no NUMBER NOT NULL,<br>
+    content      VARCHAR2(1000) NOT NULL,<br>
+    enroll_date  TIMESTAMP DEFAULT sysdate,<br>
+    writer       NUMBER NOT NULL,<br>
+    delete_yn    CHAR(1) DEFAULT 'N',<br>
+    job_no       NUMBER NOT NULL<br>
+);<br>
+
+CREATE TABLE fri_reply (<br>
+    reply_no          NUMBER NOT NULL,<br>
+    friend_no         NUMBER NOT NULL,<br>
+    writer            NUMBER NOT NULL,<br>
+    reply_enroll_date TIMESTAMP DEFAULT sysdate,<br>
+    reply_content     VARCHAR2(1000) NOT NULL,<br>
+    delete_yn         CHAR(1) DEFAULT 'N'<br>
+);<br>
+
+CREATE TABLE query_reply (<br>
+    query_reply_no NUMBER NOT NULL,<br>
+    content       VARCHAR2(1000) NOT NULL,<br>
+    enroll_date   TIMESTAMP DEFAULT sysdate,<br>
+    delete_yn     CHAR(1) DEFAULT 'N',<br>
+    query_no       NUMBER NOT NULL,<br>
+    writer        NUMBER NOT NULL<br>
+);<br>
+
+CREATE TABLE job_attach (<br>
+    job_attach_no NUMBER NOT NULL,<br>
+    origin_name   VARCHAR2(100) NOT NULL,<br>
+    change_name   VARCHAR2(100) NOT NULL,<br>
+    job_no        NUMBER NOT NULL,<br>
+    delete_yn     CHAR(1) DEFAULT 'N'<br>
+);<br>
+
+CREATE TABLE fund_reply (<br>
+    fund_reply_no NUMBER NOT NULL,<br>
+    fundraise_no  NUMBER NOT NULL,<br>
+    writer        NUMBER NOT NULL,<br>
+    content       VARCHAR2(1000) NOT NULL,<br>
+    enroll_date   TIMESTAMP DEFAULT sysdate,<br>
+    delete_yn     CHAR(1) DEFAULT 'N'<br>
+);<br>
+
+CREATE TABLE fund_attach (<br>
+    fund_attach_no NUMBER NOT NULL,<br>
+    fundraise_no   NUMBER NOT NULL,<br>
+    origin_name    VARCHAR2(100) NOT NULL,<br>
+    change_name    VARCHAR2(100) NOT NULL,<br>
+    delete_yn      CHAR(1) DEFAULT 'N'<br>
+);<br>
+
+CREATE TABLE market (<br>
+    market_no   NUMBER NOT NULL,<br>
+    writer      NUMBER NOT NULL,<br>
+    title       VARCHAR2(100) NOT NULL,<br>
+    content     VARCHAR2(4000) NOT NULL,<br>
+    price       NUMBER DEFAULT 0,<br>
+    enroll_date TIMESTAMP DEFAULT sysdate,<br>
+    edit_date   TIMESTAMP DEFAULT sysdate,<br>
+    delete_yn   CHAR(1) DEFAULT 'N',<br>
+    location_no NUMBER NOT NULL,<br>
+    status_yn   CHAR(1) DEFAULT 'Y'  --Y : 거래중 / N : 거래완료<br>
+);<br>
+
+CREATE TABLE notice (<br>
+    notice_no      NUMBER NOT NULL,<br>
+    notice_title   VARCHAR2(100) NOT NULL,<br>
+    notice_content VARCHAR2(4000) NOT NULL,<br>
+    views          NUMBER DEFAULT '0',<br>
+    enroll_date    TIMESTAMP DEFAULT sysdate,<br>
+    edit_date      TIMESTAMP DEFAULT sysdate,<br>
+    delete_yn      CHAR(1) DEFAULT 'N',<br>
+    admin_no       NUMBER NOT NULL<br>
+);<br>
+
+CREATE TABLE market_attach (<br>
+    market_attach_no NUMBER NOT NULL,<br>
+    market_no        NUMBER NOT NULL,<br>
+    origin_name      VARCHAR2(100) NOT NULL,<br>
+    change_name      VARCHAR2(100) NOT NULL,<br>
+    delete_yn        CHAR(1) DEFAULT 'N'<br>
+);<br>
+
+
+CREATE TABLE fri_attach (<br>
+    friend_attach_no NUMBER NOT NULL,<br>
+    friend_no        NUMBER NOT NULL,<br>
+    origin_name      VARCHAR2(100) NOT NULL,<br>
+    change_name      VARCHAR2(100) NOT NULL,<br>
+    delete_yn        CHAR(1) DEFAULT 'N'<br>
+);
+
+CREATE TABLE query_attach (<br>
+    query_attach_no NUMBER NOT NULL,<br>
+    origin_name    VARCHAR2(100) NOT NULL,<br>
+    change_name    VARCHAR2(100) NOT NULL,<br>
+    query_no        NUMBER NOT NULL,<br>
+    delete_yn      CHAR(1) DEFAULT 'N'<br>
+);
+
+CREATE TABLE location (<br>
+    location_no   NUMBER NOT NULL,<br>
+    location_name VARCHAR(50) NOT NULL<br>
+);<br>
+
+CREATE TABLE help_reply (<br>
+    help_reply_no NUMBER NOT NULL,<br>
+    content       VARCHAR2(1000) NOT NULL,<br>
+    enroll_date   TIMESTAMP DEFAULT sysdate,<br>
+    delete_yn     CHAR(1) DEFAULT 'N',<br>
+    help_no       NUMBER NOT NULL,<br>
+    writer        NUMBER NOT NULL<br>
+);<br>
+
+CREATE TABLE qna (<br>
+    qna_no            NUMBER NOT NULL,<br>
+    qna_title         VARCHAR2(100) NOT NULL,<br>
+    qna_content       VARCHAR2(4000) NOT NULL,<br>
+    views             NUMBER DEFAULT '0',<br>
+    enroll_date       TIMESTAMP DEFAULT sysdate,<br>
+    edit_date         TIMESTAMP DEFAULT sysdate,<br>
+    delete_yn         CHAR(1) DEFAULT 'N',<br>
+    writer            NUMBER NOT NULL,<br>
+    qna_reply_content VARCHAR(4000) DEFAULT '아직 관리자가 답변하지 않았습니다.' ,<br>
+    admin_no          NUMBER DEFAULT '1'<br>
+);<br>
+
+CREATE TABLE help_attach (<br>
+    help_attach_no NUMBER NOT NULL,<br>
+    origin_name    VARCHAR2(100) NOT NULL,<br>
+    change_name    VARCHAR2(100) NOT NULL,<br>
+    help_no        NUMBER NOT NULL,<br>
+    delete_yn      CHAR(1) DEFAULT 'N'<br>
+);<br>
+
+CREATE TABLE fundraise (<br>
+    fundraise_no NUMBER NOT NULL,<br>
+    writer       NUMBER NOT NULL,<br>
+    title        VARCHAR2(100) NOT NULL,<br>
+    content      VARCHAR2(4000) NOT NULL,<br>
+    enroll_date  TIMESTAMP DEFAULT sysdate,<br>
+    edit_date    TIMESTAMP DEFAULT sysdate,<br>
+    delete_yn    CHAR(1) DEFAULT 'N',<br>
+    views        NUMBER NOT NULL,<br>
+	  location_no  NUMBER,<br>
+    money        NUMBER DEFAULT 0,<br>
+    money_goal   NUMBER NULL<br>
+);<br>
+
+CREATE TABLE gender (<br>
+    gender_code NUMBER NOT NULL,<br>
+    gender_name CHAR(1) NOT NULL<br>
+);<br>
+
+
+CREATE TABLE job_category (<br>
+	no 	NUMBER	NOT NULL,<br>
+	name 	CHAR(50)	NOT NULL<br>
+);<br>
+
+ALTER TABLE member ADD CONSTRAINT pk_member PRIMARY KEY ( no );<br>
+
+ALTER TABLE friend ADD CONSTRAINT pk_friend PRIMARY KEY ( friend_no );<br>
+
+ALTER TABLE query ADD CONSTRAINT pk_query PRIMARY KEY ( query_no );<br>
+
+ALTER TABLE admin ADD CONSTRAINT pk_admin PRIMARY KEY ( admin_no );<br>
+
+ALTER TABLE job ADD CONSTRAINT pk_job PRIMARY KEY ( job_no );<br>
+
+ALTER TABLE help ADD CONSTRAINT pk_help PRIMARY KEY ( help_no );<br>
+
+ALTER TABLE job_reply ADD CONSTRAINT pk_job_reply PRIMARY KEY ( job_reply_no );<br>
+
+ALTER TABLE fri_reply ADD CONSTRAINT pk_fri_reply PRIMARY KEY ( reply_no );<br>
+
+ALTER TABLE query_reply ADD CONSTRAINT pk_query_reply PRIMARY KEY ( query_reply_no );<br>
+
+ALTER TABLE job_attach ADD CONSTRAINT pk_job_attach PRIMARY KEY ( job_attach_no );<br>
+
+ALTER TABLE fund_reply ADD CONSTRAINT pk_fund_reply PRIMARY KEY ( fund_reply_no );<br>
+
+ALTER TABLE fund_attach ADD CONSTRAINT pk_fund_attach PRIMARY KEY ( fund_attach_no );<br>
+
+ALTER TABLE market ADD CONSTRAINT pk_market PRIMARY KEY ( market_no );<br>
+
+ALTER TABLE notice ADD CONSTRAINT pk_notice PRIMARY KEY ( notice_no );<br>
+
+ALTER TABLE market_attach ADD CONSTRAINT pk_market_attach PRIMARY KEY ( market_attach_no );<br>
+
+ALTER TABLE fri_attach ADD CONSTRAINT pk_fri_attach PRIMARY KEY ( friend_attach_no );<br>
+
+ALTER TABLE query_attach ADD CONSTRAINT pk_query_attach PRIMARY KEY ( query_attach_no );<br>
+
+ALTER TABLE location ADD CONSTRAINT pk_location PRIMARY KEY ( location_no );<br>
+
+ALTER TABLE help_reply ADD CONSTRAINT pk_help_reply PRIMARY KEY ( help_reply_no );<br>
+
+ALTER TABLE qna ADD CONSTRAINT pk_qna PRIMARY KEY ( qna_no );<br>
+
+ALTER TABLE help_attach ADD CONSTRAINT pk_help_attach PRIMARY KEY ( help_attach_no );<br>
+
+ALTER TABLE fundraise ADD CONSTRAINT pk_fundraise PRIMARY KEY ( fundraise_no );<br>
+
+ALTER TABLE gender ADD CONSTRAINT pk_gender PRIMARY KEY ( gender_code );<br>
+
+ALTER TABLE job_category ADD CONSTRAINT pk_job_category PRIMARY KEY ( no );<br>
+
+
+
+--SEQUENCE CREATE<br>
+CREATE SEQUENCE seq_member_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_friend_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_query_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_admin_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_job_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_help_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_job_reply_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_fri_reply_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_query_reply_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_job_attach_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_fund_reply_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_fund_attach_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_market_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_notice_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_market_attach_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_fri_attach_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_query_attach_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_location_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_help_reply_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_qna_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_help_attach_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_fundraise_no NOCACHE NOCYCLE;<br>
+
+CREATE SEQUENCE seq_gender_no NOCACHE NOCYCLE;<br>
+
+--첨부파일 시퀀스값을 리턴하는 함수<br>
+CREATE OR REPLACE FUNCTION get_attachment_seq RETURN NUMBER IS<br>
+    temp NUMBER;  --변수를 선언<br>
+BEGIN<br>
+    temp := seq_fri_attach_no.nextval;<br>
+    temp := seq_market_attach_no.nextval;<br>
+    temp := seq_fund_attach_no.nextval;<br>
+    temp := seq_help_attach_no.nextval;<br>
+    temp := seq_live_attach_no.nextval;<br>
+    temp := seq_query_attach_no.nextval;<br>
+    RETURN temp;<br>
+END;<br>
+/<br>
+
+-- ADMIN DATA<br>
+INSERT INTO ADMIN(ADMIN_NO, ADMIN_ID, ADMIN_PWD) VALUES (SEQ_ADMIN_NO.NEXTVAL, 'admin', '123');<br>
+
+-- 지역 데이터<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 종로구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 중구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 용산구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 성동구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 광진구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 동대문구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 중랑구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 성북구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 강북구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 도봉구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 노원구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 은평구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 서대문구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 마포구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 양천구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 강서구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 구로구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 금천구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 영등포구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 동작구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 관악구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 서초구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 강남구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 송파구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '서울특별시 강동구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 중구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 서구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 동구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 영도구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 부산진구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 동래구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 남구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 북구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 해운대구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 사하구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 금정구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 강서구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 연제구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 수영구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 사상구'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '부산광역시 기장군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대구광역시 중구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대구광역시 동구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대구광역시 서구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대구광역시 남구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대구광역시 북구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대구광역시 수성구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대구광역시 달서구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대구광역시 달성군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '인천광역시 중구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '인천광역시 동구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '인천광역시 남구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '인천광역시 미추홀구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '인천광역시 연수구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '인천광역시 남동구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '인천광역시 부평구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '인천광역시 계양구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '인천광역시 서구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '인천광역시 강화군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '인천광역시 옹진군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '광주광역시 동구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '광주광역시 서구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '광주광역시 남구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '광주광역시 북구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '광주광역시 광산구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대전광역시 동구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대전광역시 중구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대전광역시 서구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대전광역시 유성구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '대전광역시 대덕구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '울산광역시 중구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '울산광역시 남구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '울산광역시 동구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '울산광역시 북구');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '울산광역시 울주군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, ' 세종특별자치시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 수원시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 성남시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 고양시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 용인시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 부천시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 안산시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 안양시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 남양주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 화성시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 평택시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 의정부시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 시흥시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 파주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 광명시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 김포시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 군포시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 광주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 이천시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 양주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 오산시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 구리시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 안성시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 포천시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 의왕시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 하남시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 여주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 여주군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 양평군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 동두천시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 과천시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 가평군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경기도 연천군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 춘천시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 원주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 강릉시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 동해시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 태백시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 속초시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 삼척시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 홍천군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 횡성군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 영월군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 평창군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 정선군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 철원군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 화천군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 양구군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 인제군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 고성군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '강원도 양양군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 청주시'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 충주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 제천시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 청원군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 보은군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 옥천군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 영동군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 진천군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 괴산군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 음성군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 단양군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청북도 증평군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 천안시'); <br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 공주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 보령시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 아산시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 서산시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 논산시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 계룡시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 당진시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 당진군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 금산군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 연기군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 부여군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 서천군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 청양군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 홍성군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 예산군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '충청남도 태안군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 전주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 군산시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 익산시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 정읍시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 남원시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 김제시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 완주군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 진안군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 무주군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 장수군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 임실군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 순창군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 고창군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라북도 부안군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 목포시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 여수시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 순천시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 나주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 광양시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 담양군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 곡성군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 구례군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 고흥군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 보성군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 화순군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 장흥군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 강진군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 해남군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 영암군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 무안군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 함평군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 영광군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 장성군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 완도군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 진도군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '전라남도 신안군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 포항시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 경주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 김천시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 안동시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 구미시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 영주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 영천시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 상주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 문경시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 경산시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 군위군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 의성군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 청송군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 영양군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 영덕군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 청도군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 고령군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 성주군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 칠곡군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 예천군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 봉화군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 울진군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상북도 울릉군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 창원시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 마산시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 진주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 진해시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 통영시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 사천시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 김해시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 밀양시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 거제시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 양산시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 의령군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 함안군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 창녕군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 고성군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 남해군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 하동군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 산청군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 함양군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 거창군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '경상남도 합천군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '제주특별자치도 제주시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '제주특별자치도 서귀포시');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '제주특별자치도 북제주군');<br>
+INSERT INTO LOCATION VALUES (SEQ_LOCATION_NO.NEXTVAL, '제주특별자치도 남제주군');<br>
+
+--구인구직 카테고리 인서트문<br>
+INSERT INTO JOB_CATEGORY ( NO,NAME ) VALUES ( 1,'구인' );<br>
+INSERT INTO JOB_CATEGORY ( NO,NAME ) VALUES ( 2,'구직' );<br>
+
+--공지사항 더미데이터<br>
+INSERT INTO NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, VIEWS, ENROLL_DATE, EDIT_DATE, DELETE_YN, ADMIN_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '중요 공지', '이번 주에 시스템 점검이 있을 예정입니다. 이에 따라 서비스 일시 중단될 수 있으니 참고하시기 바랍니다.', 0, TIMESTAMP '2023-06-09 12:34:56', TIMESTAMP '2023-06-09 12:34:56', 'N', 1);
+<br>INSERT INTO NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, VIEWS, ENROLL_DATE, EDIT_DATE, DELETE_YN, ADMIN_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '이벤트 안내', '2023년 여름 이벤트가 시작되었습니다! 다양한 혜택과 이벤트를 준비했으니 많은 참여 부탁드립니다.', 0, TIMESTAMP '2023-06-09 12:34:56', TIMESTAMP '2023-06-09 12:34:56', 'N', 1);
+<br>INSERT INTO NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, VIEWS, ENROLL_DATE, EDIT_DATE, DELETE_YN, ADMIN_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '서비스 업데이트', '새로운 기능과 개선사항이 적용된 업데이트가 있었습니다. 향상된 사용자 경험을 즐겨보세요!', 0, TIMESTAMP '2023-06-09 12:34:56', TIMESTAMP '2023-06-09 12:34:56', 'N', 1);
+<br>INSERT INTO NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, VIEWS, ENROLL_DATE, EDIT_DATE, DELETE_YN, ADMIN_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '일시적인 서비스 중단', '긴급 보안 업데이트를 위해 서비스가 일시적으로 중단됩니다. 이용에 불편을 드려 죄송합니다.', 0, TIMESTAMP '2023-06-09 12:34:56', TIMESTAMP '2023-06-09 12:34:56', 'N', 1);
+<br>INSERT INTO NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, VIEWS, ENROLL_DATE, EDIT_DATE, DELETE_YN, ADMIN_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '시스템 개선 안내', '서버 용량을 향상시키고 성능을 향상시키기 위해 시스템 개선 작업이 진행될 예정입니다. 이에 따라 일시적으로 접속이 어려울 수 있습니다.', 0, TIMESTAMP '2023-06-09 12:34:56', TIMESTAMP '2023-06-09 12:34:56', 'N', 1);
+<br>INSERT INTO NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, VIEWS, ENROLL_DATE, EDIT_DATE, DELETE_YN, ADMIN_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '새로운 서비스 출시', '새로운 서비스가 출시되었습니다! 다양한 기능과 혜택을 제공하니 지금 바로 확인해보세요.', 0, TIMESTAMP '2023-06-09 12:34:56', TIMESTAMP '2023-06-09 12:34:56', 'N', 1);
+<br>INSERT INTO NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, VIEWS, ENROLL_DATE, EDIT_DATE, DELETE_YN, ADMIN_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '로그인 오류 안내', '일부 사용자들이 로그인 시 오류를 경험하고 있습니다. 문제를 해결하기 위해 빠른 조치를 취하고 있으며, 조속히 복구될 것입니다.', 0, TIMESTAMP '2023-06-09 12:34:56', TIMESTAMP '2023-06-09 12:34:56', 'N', 1);
+<br>INSERT INTO NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, VIEWS, ENROLL_DATE, EDIT_DATE, DELETE_YN, ADMIN_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '신규 회원 혜택', '신규 가입한 회원들을 위한 특별한 혜택을 제공합니다. 회원가입 후 혜택을 받아보세요!', 0, TIMESTAMP '2023-06-09 12:34:56', TIMESTAMP '2023-06-09 12:34:56', 'N', 1);
+<br>INSERT INTO NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, VIEWS, ENROLL_DATE, EDIT_DATE, DELETE_YN, ADMIN_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '보안 강화 안내', '사용자의 개인정보 보호를 위해 보안 강화 작업을 실시하고 있습니다. 추가적인 보안 절차를 따라주시기 바랍니다.', 0, TIMESTAMP '2023-06-09 12:34:56', TIMESTAMP '2023-06-09 12:34:56', 'N', 1);
+<br>INSERT INTO NOTICE (NOTICE_NO, NOTICE_TITLE, NOTICE_CONTENT, VIEWS, ENROLL_DATE, EDIT_DATE, DELETE_YN, ADMIN_NO)
+VALUES (SEQ_NOTICE_NO.NEXTVAL, '문의 및 문제 신고 안내', '서비스 이용 중 문의나 문제가 발생하신 경우, 고객센터로 문의 또는 신고해주시면 신속히 처리해드리겠습니다.', 0, TIMESTAMP '2023-06-09 12:34:56', TIMESTAMP '2023-06-09 12:34:56', 'N', 1);
+<br>
+--QNA 더미데이터<br>
+INSERT INTO QNA (QNA_NO, QNA_TITLE, QNA_CONTENT, WRITER, QNA_REPLY_CONTENT)
+VALUES(SEQ_QNA_NO.NEXTVAL, '채팅 지원 여부', '사이트에서 채팅 기능을 제공하나요?', 1, '네, 저희 사이트에서는 실시간 채팅 기능을 제공하고 있습니다.');
+<br>INSERT INTO QNA (QNA_NO, QNA_TITLE, QNA_CONTENT, WRITER, QNA_REPLY_CONTENT)
+VALUES(SEQ_QNA_NO.NEXTVAL, '회원 가입 절차', '회원 가입을 하려면 어떤 절차를 거쳐야 하나요?', 1, '회원 가입 절차는 사이트 우측 상단의 "회원 가입" 버튼을 클릭하여 필요한 정보를 입력하고 제출하면 됩니다.');
+<br>INSERT INTO QNA (QNA_NO, QNA_TITLE, QNA_CONTENT, WRITER, QNA_REPLY_CONTENT)
+VALUES(SEQ_QNA_NO.NEXTVAL, '비밀번호 분실 시 대처 방법', '비밀번호를 분실한 경우 어떻게 해야 하나요?', 1, '비밀번호 분실 시 "비밀번호 찾기" 링크를 클릭하여 등록한 이메일로 비밀번호 재설정 링크를 받을 수 있습니다.');
+<br>NSERT INTO QNA (QNA_NO, QNA_TITLE, QNA_CONTENT, WRITER, QNA_REPLY_CONTENT)
+VALUES(SEQ_QNA_NO.NEXTVAL, '로그인 오류 메시지', '로그인 시 오류 메시지가 나타날 때는 어떻게 해야 하나요?', 1, '로그인 오류 메시지가 나타나는 경우, 입력한 아이디와 비밀번호를 확인하고 재시도해보세요.');
+<br>INSERT INTO QNA (QNA_NO, QNA_TITLE, QNA_CONTENT, WRITER, QNA_REPLY_CONTENT)
+VALUES(SEQ_QNA_NO.NEXTVAL, '로그인 시간 제한', '로그인 세션이 시간이 지나면 자동으로 로그아웃 되나요?', 1, '네, 일정 시간 동안 활동이 없을 경우 자동으로 로그아웃됩니다.');
+<br>INSERT INTO QNA (QNA_NO, QNA_TITLE, QNA_CONTENT, WRITER, QNA_REPLY_CONTENT)
+VALUES(SEQ_QNA_NO.NEXTVAL, '회원 정보 수정 방법', '회원 정보를 어떻게 수정하면 되나요?', 1, '회원 정보 수정은 로그인 후 마이페이지에서 가능합니다. 필요한 정보를 수정하고 저장 버튼을 클릭하면 적용됩니다.');
+<br>INSERT INTO QNA (QNA_NO, QNA_TITLE, QNA_CONTENT, WRITER, QNA_REPLY_CONTENT)
+VALUES(SEQ_QNA_NO.NEXTVAL, '비밀번호 변경 주기', '비밀번호 변경은 얼마마다 해야 하나요?', 1, '보안을 위해 3개월에서 6개월마다 비밀번호를 변경하는 것을 권장합니다.');
+<br>INSERT INTO QNA (QNA_NO, QNA_TITLE, QNA_CONTENT, WRITER, QNA_REPLY_CONTENT)
+VALUES(SEQ_QNA_NO.NEXTVAL, '회원 탈퇴 절차', '회원 탈퇴를 하려면 어떤 절차를 거쳐야 하나요?', 1, '회원 탈퇴를 원하시면 마이페이지에서 "회원 탈퇴"를 선택하고 안내에 따라 절차를 진행하시면 됩니다.');
+<br>INSERT INTO QNA (QNA_NO, QNA_TITLE, QNA_CONTENT, WRITER, QNA_REPLY_CONTENT)
+VALUES(SEQ_QNA_NO.NEXTVAL, '로그인 시 안전한 연결 확인', '로그인 시 안전한 연결(HTTPS)을 사용하고 있는지 어떻게 확인하나요?', 1, '로그인 페이지의 URL이 "https://"로 시작하는지 확인하여 안전한 연결을 사용하고 있음을 확인할 수 있습니다.');
+<br>INSERT INTO QNA (QNA_NO, QNA_TITLE, QNA_CONTENT, WRITER, QNA_REPLY_CONTENT)
+VALUES(SEQ_QNA_NO.NEXTVAL, '회원 가입 필수 정보', '회원 가입 시 필수로 입력해야 하는 정보는 무엇인가요?', 1, '회원 가입 시에는 아이디, 비밀번호, 이메일 등의 필수 정보를 입력해야 합니다.');
+
+
+<br>
+--도움 더미데이터<br>
+INSERT INTO HELP (HELP_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_HELP_NO.NEXTVAL, '교통 혼잡 상황 도움', '안녕하세요, 현재 저의 지역에서 교통 상황이 어려워서 이에 대한 대처 방법을 알고 싶습니다. 혼잡한 도로나 교차로를 운전하면서 대처하는 팁이나 경험을 공유해주시면 감사하겠습니다.', TIMESTAMP '2023-06-09 12:34:56', 1, TIMESTAMP '2023-06-09 12:34:56', 'N', 4, 0);
+<br>INSERT INTO HELP (HELP_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_HELP_NO.NEXTVAL, '이사 도와주실 분 계신가요?', '안녕하세요, 저의 지역에서 빠른시일 내에 이사를 진행할 예정인데, 도와주실 수 있는 분을 찾고 있습니다. 이사 시간에 도움이 필요하거나 이사 관련 팁을 공유해주실 분은 연락 부탁드립니다.', TIMESTAMP '2023-06-09 12:34:56', 1, TIMESTAMP '2023-06-09 12:34:56', 'N', 5, 0);
+<br>INSERT INTO HELP (HELP_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_HELP_NO.NEXTVAL, '반려동물 돌봄 도움 요청합니다', '안녕하세요, 저는 서울쪽에서 살고있는데, 잠시 동안 반려동물을 돌봐줄 수 있는 분을 찾고 있습니다. 반려동물 돌봄에 관심 있으신 분이 계시다면 연락 부탁드립니다.', TIMESTAMP '2023-06-09 12:34:56', 1, TIMESTAMP '2023-06-09 12:34:56', 'N', 6, 0);
+<br>INSERT INTO HELP (HELP_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_HELP_NO.NEXTVAL, '도움이 필요해요', '도움이 필요한 문제가 발생하여 도움을 요청합니다. 부탁드립니다. 자세한 내용은 댓글 다시면 알려드리겠습니다.', TIMESTAMP '2023-06-09 12:34:56', 1, TIMESTAMP '2023-06-09 12:34:56', 'N', 7, 0);
+<br>INSERT INTO HELP (HELP_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_HELP_NO.NEXTVAL, '경기도에서의 도시 생활 팁 도움 필요합니다', '안녕하세요, 시골에서 경기도쪽에 새로 이사 왔는데, 도시 생활에 익숙하지 않아서 도움이 필요합니다. 저의 지역에서의 생활 팁이나 유용한 정보를 알려주시면 감사하겠습니다.', TIMESTAMP '2023-06-09 12:34:56', 1, TIMESTAMP '2023-06-09 12:34:56', 'N', 5, 0);
+<br>INSERT INTO HELP (HELP_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_HELP_NO.NEXTVAL, '친구 잘 사귀는 방법 아시는분 도와주세요ㅠㅠ', '이사오고 나서 친구가 없어서 그러는데 제목대로 방법 알려주세요ㅠㅠ', TIMESTAMP '2023-06-09 12:34:56', 1, TIMESTAMP '2023-06-09 12:34:56', 'N', 6, 0);
+<br>INSERT INTO HELP (HELP_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_HELP_NO.NEXTVAL, '교통사고를 처음으로 겪어봤는데 어떻게 해야할까요,,', '교통사고를 처음 당해봤는데 어떤 절차를 해야할까요 아시는분 도와주세요ㅠㅠ', TIMESTAMP '2023-06-09 12:34:56', 1, TIMESTAMP '2023-06-09 12:34:56', 'N', 4, 0);
+<br>INSERT INTO HELP (HELP_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_HELP_NO.NEXTVAL, '서울 마포구에 사시는분 도와주세요', '바퀴벌레가 나왔는데 못잡겠어요... 도와주세요ㅠㅠ', TIMESTAMP '2023-06-09 12:34:56', 1, TIMESTAMP '2023-06-09 12:34:56', 'N', 3, 0);
+<br>INSERT INTO HELP (HELP_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_HELP_NO.NEXTVAL, '도움이 필요합니다', '도움이 필요한 내용입니다.', TIMESTAMP '2023-06-09 12:34:56', 1, TIMESTAMP '2023-06-09 12:34:56', 'N', 4, 0);
+<br>INSERT INTO HELP (HELP_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_HELP_NO.NEXTVAL, '도움이 요청합니다', '도움 요청 내용입니다.', TIMESTAMP '2023-06-09 12:34:56', 1, TIMESTAMP '2023-06-09 12:34:56', 'N', 3, 0);
+<br>
+--JOB 더미데이터<br>
+INSERT INTO JOB(JOB_NO,TITLE,CONTENT,WRITER,JOB_CATEGORY_NO,LOCATION_NO)VALUES(SEQ_JOB_NO.NEXTVAL, '웹 개발자 구인', '웹 개발자를 구인합니다. 주니어부터 시니어까지 모두 환영합니다. 경력에 따른 우대 조건이 적용됩니다.',1,1, 125);
+<br>INSERT INTO JOB(JOB_NO,TITLE,CONTENT,WRITER,JOB_CATEGORY_NO,LOCATION_NO)VALUES(SEQ_JOB_NO.NEXTVAL, '서빙 알바 구인', '레스토랑에서 서빙 알바를 구인합니다. 경험자와 미경험자 모두 지원 가능하며, 주말 근무 가능한 분을 우대합니다.', 1, 1, 45);
+<br>INSERT INTO JOB(JOB_NO,TITLE,CONTENT,WRITER,JOB_CATEGORY_NO,LOCATION_NO)VALUES(SEQ_JOB_NO.NEXTVAL, '마케팅 인턴 구직', '기획사에서 마케팅 인턴을 구직합니다. 대학 재학 중이거나 최근 졸업한 분을 대상으로 합니다.', 1, 2, 78);
+<br>INSERT INTO JOB(JOB_NO,TITLE,CONTENT,WRITER,JOB_CATEGORY_NO,LOCATION_NO)VALUES(SEQ_JOB_NO.NEXTVAL, '영어 강사 구인', '어학원에서 영어 강사를 구인합니다. 자격증 소지자 우대하며, 주 3회 이상 근무 가능한 분을 찾고 있습니다.', 1, 2, 163);
+<br>INSERT INTO JOB(JOB_NO,TITLE,CONTENT,WRITER,JOB_CATEGORY_NO,LOCATION_NO)VALUES(SEQ_JOB_NO.NEXTVAL, '배달 대행 알바 구인', '배달 대행 업체에서 주말 알바를 구인합니다. 시간은 18:00~22:00이며, 이동 수단을 보유한 분을 우대합니다.', 1, 1, 92);
+<br>INSERT INTO JOB(JOB_NO,TITLE,CONTENT,WRITER,JOB_CATEGORY_NO,LOCATION_NO)VALUES(SEQ_JOB_NO.NEXTVAL, '식당 알바 구인', '식당에서 주중 알바생을 구합니다. 조리 경험이 있는 분이면 더욱 좋으며, 신입도 지원 가능합니다.', 1, 2, 72);
+<br>INSERT INTO JOB(JOB_NO,TITLE,CONTENT,WRITER,JOB_CATEGORY_NO,LOCATION_NO)VALUES(SEQ_JOB_NO.NEXTVAL, '판매원 구인', '쇼핑몰에서 온라인 판매원을 구인합니다. 상품 판매 및 고객 상담 업무를 수행할 분을 찾고 있습니다.', 1, 1, 34);
+<br>INSERT INTO JOB(JOB_NO,TITLE,CONTENT,WRITER,JOB_CATEGORY_NO,LOCATION_NO)VALUES(SEQ_JOB_NO.NEXTVAL, 'IT 기술지원 담당자 구직', 'IT 기술지원 담당자를 구직합니다. 컴퓨터 및 네트워크 관련 기술 지식이 있는 분을 우대합니다.', 1, 2, 187);
+<br>INSERT INTO JOB(JOB_NO,TITLE,CONTENT,WRITER,JOB_CATEGORY_NO,LOCATION_NO)VALUES(SEQ_JOB_NO.NEXTVAL, '리서치 알바 구인', '연구소에서 리서치 알바를 구인합니다. 데이터 수집 및 분석 업무를 수행할 분을 찾고 있습니다.', 1, 1, 56);
+<br>
+--ADMIN Dummy Data<br>
+<br>INSERT INTO ADMIN (ADMIN_NO, ADMIN_ID, ADMIN_PWD) VALUES (SEQ_ADMIN_NO.NEXTVAL, 'superuser', '1234');
+<br>
+--QUERY 더미데이터<br>
+INSERT INTO QUERY (QUERY_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_QUERY_NO.NEXTVAL, '이 주변 가까운 마트가 어디인가요?', '갈갈동 3단지인데 가까운 마트 알려주세요', TIMESTAMP '2023-06-09 12:34:56', 2, TIMESTAMP '2023-06-09 12:34:56','N',4,0);
+<br>INSERT INTO QUERY (QUERY_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_QUERY_NO.NEXTVAL, '도서관 문 열었나요?', '시립도서관 공사 끝났나요? ', TIMESTAMP '2023-06-10 12:34:56', 2, TIMESTAMP '2023-06-10 12:34:56','N',9,5);
+<br>INSERT INTO QUERY (QUERY_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_QUERY_NO.NEXTVAL, '시청앞에 생긴거 뭔가요?', '시청앞에 공사중이던데 뭐죠?', TIMESTAMP '2023-06-04 12:34:56', 2, TIMESTAMP '2023-06-04 12:34:56','N',37,7);
+<br>INSERT INTO QUERY (QUERY_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_QUERY_NO.NEXTVAL, '질문이요', '교통비랑 통신비 다들 월 얼마 나오세요?', TIMESTAMP '2023-06-11 12:34:56', 2, TIMESTAMP '2023-06-11 12:34:56','N',57,3);
+<br>INSERT INTO QUERY (QUERY_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_QUERY_NO.NEXTVAL, '이 주변 도서관은 어떻게 가죠?', '대중교통으로 알려주세요', TIMESTAMP '2023-06-03 12:34:56', 2, TIMESTAMP '2023-06-03 12:34:56','N',134,8);
+<br>INSERT INTO QUERY (QUERY_NO, TITLE, CONTENT, ENROLL_DATE, WRITER, EDIT_DATE, DELETE_YN, LOCATION_NO, VIEWS)
+VALUES (SEQ_QUERY_NO.NEXTVAL, '여기 중학교 괜찮나요?', '갈갈중학교 괜찮나요?', TIMESTAMP '2023-06-07 12:34:56', 2, TIMESTAMP '2023-06-07 12:34:56','N',200,4);
+<br>
+COMMIT;<br>
+                    </div>
+                </div>
                     <div id="category">
                         <a href="inf.html">
-                            <button>Inf</button>
+                            <button>Info</button>
                         </a>
                         <a href="FP1.html">
                             <button>Final Project1</button>
@@ -274,6 +1138,7 @@
                         <a href="End.html">
                             <button>End</button>
                         </a>
+                        </div>
                     
                     </div>
 
@@ -286,4 +1151,15 @@
 
 </body>
 
+
 </html>
+<script>
+    function toggleContent() {
+      var content = document.getElementById("content");
+      if (content.style.display === "none") {
+        content.style.display = "block"; /* 내용이 숨겨져 있다면 보이도록 변경합니다 */
+      } else {
+        content.style.display = "none"; /* 내용이 보이고 있다면 숨깁니다 */
+      }
+    }
+</script>
