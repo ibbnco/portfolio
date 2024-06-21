@@ -16,6 +16,7 @@ class HomePage extends React.Component<{}> {
 
 
     fetchData = () => {
+        // axios.get('http://localhost:8081/checkConnection')
         axios.get('http://34.16.172.154/checkConnection')
             .then(response => {
                 this.setState({ responseMessage: response.data });
