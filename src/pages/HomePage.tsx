@@ -15,43 +15,36 @@ interface State {
     guests: Guest[]; // Assuming Guest interface is defined elsewhere
 }
 
-
 class HomePage extends React.Component<{}, State> {
     constructor(props: {}) {
         super(props);
         this.state = {
-            newGuestName: '',
+            newGuestName: '', // Initialize with empty string
             newReplyText: '',
             responseMessage: '',
             guests: []
         };
     }
 
-    componentDidMount(): void {
-        this.fetchData();
+    componentDidMount(): void {;
         this.fetchGuests();
+
+        // Retrieve 'nickname' from local storage
+        const storedNickname = localStorage.getItem('nickname');
+        if (storedNickname) {
+            this.setState({ newGuestName: storedNickname });
+        }
     }
 
     fetchGuests = () => {
-        axios.get<Guest[]>('http://34.16.172.154:8080/guest-replies')
         // axios.get<Guest[]>('http://localhost:8080/guest-replies')
+        axios.get<Guest[]>('http://34.16.172.154:8080/guest-replies')
             .then(response => {
                 this.setState({ guests: response.data });
             })
             .catch(error => console.error('Error fetching data:', error));
     }
 
-    fetchData = () => {
-        // axios.get<string>('http://localhost:8080/checkConnection')
-        axios.get<string>('http://34.16.172.154:8080/checkConnection')
-            .then(response => {
-                this.setState({ responseMessage: response.data });
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-                this.setState({ responseMessage: '데이터 가져오기 오류 발생' });
-            });
-    };
 
     handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -66,58 +59,48 @@ class HomePage extends React.Component<{}, State> {
         const { newGuestName, newReplyText } = this.state;
         if (newGuestName.trim() !== '' && newReplyText.trim() !== '') {
             const newGuest: Guest = {
-                id: Date.now(), // 임시로 생성
+                id: Date.now(),
                 guestName: newGuestName,
                 replyText: newReplyText,
-                isActive: true // Initially active
+                isActive: true
             };
-            // axios.post('http://localhost:8080/guest-replies', newGuest)
             axios.post('http://34.16.172.154:8080/guest-replies', newGuest)
                 .then(response => {
                     console.log('Guest added:', response.data);
-                    this.fetchGuests(); // 데이터 다시 불러오기
-                    this.setState({ newGuestName: '', newReplyText: '' }); // 입력 필드 초기화
+                    this.fetchGuests();
+                    this.setState({ newGuestName: '', newReplyText: '' });
                 })
                 .catch(error => console.error('Error adding guest:', error));
         }
     };
 
     handleDelete = (id: number) => {
-        // axios.delete(`http://localhost:8080/guest-replies/${id}`)
         axios.delete(`http://34.16.172.154:8080/guest-replies/${id}`)
             .then(response => {
                 console.log('Guest deleted:', response.data);
-                this.fetchGuests(); // 데이터 다시 불러오기
+                this.fetchGuests();
             })
             .catch(error => console.error('Error deleting guest:', error));
     };
-    
-    
 
     render() {
-        const { newGuestName, newReplyText, responseMessage, guests } = this.state;
-
+        const { newReplyText, responseMessage, guests } = this.state;
+        const storedNickname = localStorage.getItem('nickname');
+    
         return (
             <div className="container">
                 <div className="homeContainer">
                     <div className="homeContents">
                         <div className="inHomeContent">
                             <div className="inContent1">
-
+                                {/* Content in inContent1 */}
                             </div>
                             <div className="inContent2">
-                                <p>연결 확인 : {responseMessage}</p>
                                 <button className="inContentBtn">HOME</button>
+    
                                 <div className="reply">
                                     <h2>Guest List</h2>
                                     <form onSubmit={this.handleSubmit}>
-                                        <input
-                                            type="text"
-                                            name="newGuestName"
-                                            value={newGuestName}
-                                            onChange={this.handleInputChange}
-                                            placeholder="게스트 이름"
-                                        />
                                         <input
                                             type="text"
                                             name="newReplyText"
@@ -132,7 +115,9 @@ class HomePage extends React.Component<{}, State> {
                                             {guests.map(guest => (
                                                 <li key={guest.id}>
                                                     {guest.guestName}: {guest.replyText}
-                                                    <button onClick={() => this.handleDelete(guest.id)}>삭제</button>
+                                                    {storedNickname === guest.guestName && (
+                                                        <button onClick={() => this.handleDelete(guest.id)}>삭제</button>
+                                                    )}
                                                 </li>
                                             ))}
                                         </ul>
@@ -140,7 +125,6 @@ class HomePage extends React.Component<{}, State> {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div className="musicContents">
                         <div className="inMusicContent"></div>
@@ -149,6 +133,7 @@ class HomePage extends React.Component<{}, State> {
             </div>
         );
     }
+    
 }
 
 export default HomePage;
