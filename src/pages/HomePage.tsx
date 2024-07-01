@@ -1,5 +1,13 @@
 import React, { ChangeEvent } from 'react';
 import axios from 'axios';
+import MusicComponent from '../component/MusicComponent';
+import Career from './homepage/Career';
+import SideHomeComponent from '../component/SideHomeComponent';
+import Skill from './homepage/Skill';
+import Project from './homepage/Project';
+import Project2 from './homepage/Project2';
+import Experience from './homepage/Experience';
+import Wish from './homepage/Wish';
 
 interface Guest {
     id: number;
@@ -26,7 +34,8 @@ class HomePage extends React.Component<{}, State> {
         };
     }
 
-    componentDidMount(): void {;
+    componentDidMount(): void {
+        ;
         this.fetchGuests();
 
         // Retrieve 'nickname' from local storage
@@ -37,8 +46,8 @@ class HomePage extends React.Component<{}, State> {
     }
 
     fetchGuests = () => {
-        // axios.get<Guest[]>('http://localhost:8080/guest-replies')
-        axios.get<Guest[]>('http://34.16.172.154:8080/guest-replies')
+        axios.get<Guest[]>('http://localhost:22/guest-replies')
+            // axios.get<Guest[]>('http://3.24.123.44:22/guest-replies')
             .then(response => {
                 this.setState({ guests: response.data });
             })
@@ -64,7 +73,8 @@ class HomePage extends React.Component<{}, State> {
                 replyText: newReplyText,
                 isActive: true
             };
-            axios.post('http://34.16.172.154:8080/guest-replies', newGuest)
+            axios.post('http://localhost:22/guest-replies', newGuest)
+                // axios.post('http://3.24.123.44/guest-replies', newGuest)
                 .then(response => {
                     console.log('Guest added:', response.data);
                     this.fetchGuests();
@@ -75,7 +85,8 @@ class HomePage extends React.Component<{}, State> {
     };
 
     handleDelete = (id: number) => {
-        axios.delete(`http://34.16.172.154:8080/guest-replies/${id}`)
+        axios.delete(`http://localhost:22/guest-replies/${id}`)
+            // axios.delete(`http://3.24.123.44:22/guest-replies/${id}`)
             .then(response => {
                 console.log('Guest deleted:', response.data);
                 this.fetchGuests();
@@ -86,54 +97,58 @@ class HomePage extends React.Component<{}, State> {
     render() {
         const { newReplyText, responseMessage, guests } = this.state;
         const storedNickname = localStorage.getItem('nickname');
-    
+
         return (
             <div className="container">
                 <div className="homeContainer">
                     <div className="homeContents">
                         <div className="inHomeContent">
-                            <div className="inContent1">
-                                {/* Content in inContent1 */}
-                            </div>
+                            <SideHomeComponent></SideHomeComponent>
                             <div className="inContent2">
-                                <button className="inContentBtn">HOME</button>
-    
-                                <div className="reply">
-                                    <h2>Guest List</h2>
-                                    <form onSubmit={this.handleSubmit}>
-                                        <input
-                                            type="text"
-                                            name="newReplyText"
-                                            value={newReplyText}
-                                            onChange={this.handleInputChange}
-                                            placeholder="댓글을 입력하세요"
-                                        />
-                                        <button type="submit">댓글 추가</button>
-                                    </form>
+                                <div >
+                                    <button className="inContentBtn1">HOME</button>
+
                                     <div className="reply">
-                                        <ul>
-                                            {guests.map(guest => (
-                                                <li key={guest.id}>
-                                                    {guest.guestName}: {guest.replyText}
-                                                    {storedNickname === guest.guestName && (
-                                                        <button onClick={() => this.handleDelete(guest.id)}>삭제</button>
-                                                    )}
-                                                </li>
-                                            ))}
-                                        </ul>
+                                        <h2>Guest List</h2>
+                                        <form onSubmit={this.handleSubmit}>
+                                            <input
+                                                type="text"
+                                                name="newReplyText"
+                                                value={newReplyText}
+                                                onChange={this.handleInputChange}
+                                                placeholder="댓글을 입력하세요"
+                                            />
+                                            <button type="submit">댓글 추가</button>
+                                        </form>
+                                        <div className="reply">
+                                            <ul>
+                                                {guests.map(guest => (
+                                                    <li key={guest.id}>
+                                                        {guest.guestName}: {guest.replyText}
+                                                        {storedNickname === guest.guestName && (
+                                                            <button onClick={() => this.handleDelete(guest.id)}>삭제</button>
+                                                        )}
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
+                                {/* <Career/>
+                            <Skill/>
+                            <Project />
+                            <Project2 />
+                            <Experience />
+                            <Wish /> */}
                             </div>
                         </div>
                     </div>
-                    <div className="musicContents">
-                        <div className="inMusicContent"></div>
-                    </div>
+                    <MusicComponent />
                 </div>
             </div>
         );
     }
-    
+
 }
 
 export default HomePage;
